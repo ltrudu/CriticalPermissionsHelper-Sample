@@ -17,5 +17,5 @@ dependencyResolutionManagement {
     }
 }
 
-include ':CriticalPermissionsHelperSample', ':CriticalPermissionsHelper'
+include ':CriticalPermissionsHelperSample'
 rootProject.name = "CriticalPermissionsHelperSample"
