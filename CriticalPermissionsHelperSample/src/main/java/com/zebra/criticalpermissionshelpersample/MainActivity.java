@@ -139,7 +139,7 @@ public class MainActivity extends AppCompatActivity {
                      @Override
                      public void onError(String message, String resultXML) {
                          // Return error when permission is not granted
-                         if(message.contains("Permission is not granted !"))
+                         if(message.contains("Permission is not granted!"))
                          {
                              // Permission not granted
                              MainActivity.this.runOnUiThread(new Runnable() {
