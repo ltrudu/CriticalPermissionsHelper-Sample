@@ -1,22 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/lblAccessNotifications"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
-        android:text="Access Notifications"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/lblAccessNotifications"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:text="Access Notifications"
+                android:textAppearance="@style/AppTheme"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
     <Switch
         android:id="@+id/swAccessNotifications"
@@ -26,56 +35,60 @@
         app:layout_constraintEnd_toStartOf="@+id/btAccessNotifications"
         app:layout_constraintBaseline_toBaselineOf="@id/lblAccessNotifications" />
 
-    <Button
-        android:id="@+id/btAccessNotifications"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:text="Verify"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBaseline_toBaselineOf="@id/lblAccessNotifications" />
+            <Button
+                android:id="@+id/btAccessNotifications"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:text="Verify"
+                android:textSize="12sp"
+                app:layout_constraintBaseline_toBaselineOf="@id/lblAccessNotifications"
+                app:layout_constraintEnd_toEndOf="parent" />
 
 
-    <TextView
-        android:id="@+id/lblPackageUsageStats"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
-        android:text="Package Usage Stats"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btAccessNotifications" />
+            <TextView
+                android:id="@+id/lblPackageUsageStats"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:text="Package Usage Stats"
+                android:textAppearance="@style/AppTheme"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/btAccessNotifications" />
 
-    <Switch
-        android:id="@+id/swPackageUsageStats"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        app:layout_constraintEnd_toStartOf="@id/btPackageUsageStats"
-        app:layout_constraintBaseline_toBaselineOf="@id/lblPackageUsageStats" />
+            <Switch
+                android:id="@+id/swPackageUsageStats"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintBaseline_toBaselineOf="@id/lblPackageUsageStats"
+                app:layout_constraintEnd_toStartOf="@id/btPackageUsageStats" />
 
-    <Button
-        android:id="@+id/btPackageUsageStats"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:text="Verify"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBaseline_toBaselineOf="@id/lblPackageUsageStats" />
+            <Button
+                android:id="@+id/btPackageUsageStats"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:text="Verify"
+                android:textSize="12sp"
+                app:layout_constraintBaseline_toBaselineOf="@id/lblPackageUsageStats"
+                app:layout_constraintEnd_toEndOf="parent" />
 
-    <TextView
-        android:id="@+id/lblSystemAlertWindow"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
-        android:text="System Alert Window"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btPackageUsageStats" />
+            <TextView
+                android:id="@+id/lblSystemAlertWindow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:text="System Alert Window"
+                android:textAppearance="@style/AppTheme"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/btPackageUsageStats" />
 
     <Switch
         android:id="@+id/swSystemAlertWindow"
@@ -85,26 +98,28 @@
         app:layout_constraintEnd_toStartOf="@id/btSystemAlertWindow"
         app:layout_constraintBaseline_toBaselineOf="@id/lblSystemAlertWindow" />
 
-    <Button
-        android:id="@+id/btSystemAlertWindow"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:text="Verify"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBaseline_toBaselineOf="@id/lblSystemAlertWindow" />
+            <Button
+                android:id="@+id/btSystemAlertWindow"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:text="Verify"
+                android:textSize="12sp"
+                app:layout_constraintBaseline_toBaselineOf="@id/lblSystemAlertWindow"
+                app:layout_constraintEnd_toEndOf="parent" />
 
-    <TextView
-        android:id="@+id/lblGetAppsOpsStats"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
-        android:text="Get Apps Ops Stats"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btSystemAlertWindow" />
+            <TextView
+                android:id="@+id/lblGetAppsOpsStats"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:text="Get Apps Ops Stats"
+                android:textAppearance="@style/AppTheme"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/btSystemAlertWindow" />
 
     <Switch
         android:id="@+id/swGetAppsOpsStats"
@@ -114,26 +129,28 @@
         app:layout_constraintEnd_toStartOf="@id/btGetAppsOpsStats"
         app:layout_constraintBaseline_toBaselineOf="@id/lblGetAppsOpsStats" />
 
-    <Button
-        android:id="@+id/btGetAppsOpsStats"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:text="Verify"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBaseline_toBaselineOf="@id/lblGetAppsOpsStats" />
+            <Button
+                android:id="@+id/btGetAppsOpsStats"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:text="Verify"
+                android:textSize="12sp"
+                app:layout_constraintBaseline_toBaselineOf="@id/lblGetAppsOpsStats"
+                app:layout_constraintEnd_toEndOf="parent" />
 
-    <TextView
-        android:id="@+id/lblBatteryStats"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
-        android:text="Battery Stats"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btGetAppsOpsStats" />
+            <TextView
+                android:id="@+id/lblBatteryStats"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:text="Battery Stats"
+                android:textAppearance="@style/AppTheme"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/btGetAppsOpsStats" />
 
     <Switch
         android:id="@+id/swBatteryStats"
@@ -143,27 +160,29 @@
         app:layout_constraintEnd_toStartOf="@id/btBatteryStats"
         app:layout_constraintBaseline_toBaselineOf="@id/lblBatteryStats" />
 
-    <Button
-        android:id="@+id/btBatteryStats"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:text="Verify"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBaseline_toBaselineOf="@id/lblBatteryStats" />
+            <Button
+                android:id="@+id/btBatteryStats"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:text="Verify"
+                android:textSize="12sp"
+                app:layout_constraintBaseline_toBaselineOf="@id/lblBatteryStats"
+                app:layout_constraintEnd_toEndOf="parent" />
 
 
-    <TextView
-        android:id="@+id/lblManageExternalFiles"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
-        android:text="Manage External Files"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btBatteryStats" />
+            <TextView
+                android:id="@+id/lblManageExternalFiles"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:text="Manage External Files"
+                android:textAppearance="@style/AppTheme"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/btBatteryStats" />
 
     <Switch
         android:id="@+id/swManageExternalFiles"
@@ -173,30 +192,135 @@
         app:layout_constraintEnd_toStartOf="@id/btManageExternalFiles"
         app:layout_constraintBaseline_toBaselineOf="@id/lblManageExternalFiles" />
 
-    <Button
-        android:id="@+id/btManageExternalFiles"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:text="Verify"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBaseline_toBaselineOf="@id/lblManageExternalFiles" />
-    
-    <ScrollView
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:layout_constraintTop_toBottomOf="@id/btManageExternalFiles"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent">
+            <Button
+                android:id="@+id/btManageExternalFiles"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:text="Verify"
+                android:textSize="12sp"
+                app:layout_constraintBaseline_toBaselineOf="@id/lblManageExternalFiles"
+                app:layout_constraintEnd_toEndOf="parent" />
 
-        <TextView
-            android:id="@+id/tv_status"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:inputType="textMultiLine"
-            android:singleLine="false"
-            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
-    </ScrollView>
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/lblBindNotificationListener"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:text="Bind Notification Listener"
+                android:textAppearance="@style/AppTheme"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/btManageExternalFiles"
+                tools:visibility="visible" />
+
+            <Switch
+                android:id="@+id/swBindNotificationListener"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintBaseline_toBaselineOf="@id/lblBindNotificationListener"
+                app:layout_constraintEnd_toStartOf="@id/btBindNotificationListener"
+                tools:visibility="visible" />
+
+            <Button
+                android:id="@+id/btBindNotificationListener"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:text="Verify"
+                android:textSize="12sp"
+                app:layout_constraintBaseline_toBaselineOf="@id/lblBindNotificationListener"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:visibility="visible" />
+
+            <TextView
+                android:id="@+id/lblReadLogs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:text="Read Logs"
+                android:textAppearance="@style/AppTheme"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/lblBindNotificationListener"
+                tools:visibility="visible" />
+
+            <Switch
+                android:id="@+id/swReadLogs"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintBaseline_toBaselineOf="@id/lblReadLogs"
+                app:layout_constraintEnd_toStartOf="@id/btReadLogs"
+                tools:visibility="visible" />
+
+            <Button
+                android:id="@+id/btReadLogs"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:text="Verify"
+                android:textSize="12sp"
+                app:layout_constraintBaseline_toBaselineOf="@id/lblReadLogs"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:visibility="visible" />
+
+            <TextView
+                android:id="@+id/lblGrantDangerousPermission"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:text="Grant Dangerous Permissions"
+                android:textAppearance="@style/AppTheme"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/btReadLogs"
+                tools:visibility="visible" />
+
+            <Switch
+                android:id="@+id/swGrantDangerousPermission"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintBaseline_toBaselineOf="@id/lblGrantDangerousPermission"
+                app:layout_constraintEnd_toStartOf="@id/btGrantDangerousPermission" />
+
+            <Button
+                android:id="@+id/btGrantDangerousPermission"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:text="Verify"
+                android:textSize="12sp"
+                app:layout_constraintBaseline_toBaselineOf="@id/lblGrantDangerousPermission"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:visibility="visible" />
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/btGrantDangerousPermission">
+
+                <TextView
+                    android:id="@+id/tv_status"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="textMultiLine"
+                    android:singleLine="false"
+                    tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+
+            </ScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
+</RelativeLayout>
