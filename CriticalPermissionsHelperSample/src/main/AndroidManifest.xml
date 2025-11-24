@@ -2,12 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="com.zebra.criticalpermissionshelpersample">
-    <uses-feature
-        android:name="android.hardware.camera"
-        android:required="false" />
 
-    <!--> TODO: COMPULSORY Add this permissions to your manifest </-->
+    <!--> TODO: MANDATORY Add this permissions to your manifest </-->
     <uses-permission android:name="com.symbol.emdk.permission.EMDK" />
+    <!--> TODO: MANDATORY End of / Add this permissions to your manifest </-->
 
     <!-- Info : List of available permissions for specific MX versions>
     // MX10.0 Permissions
@@ -93,9 +91,11 @@
     <uses-permission android:name="android.permission.POST_NOTIFICATIONS"
         tools:ignore="ProtectedPermissions" />
 
+    <!-- TODO: Mandatory in target App, add query to emdkservice -->
     <queries>
         <package android:name="com.symbol.emdk.emdkservice" />
     </queries>
+    <!-- TODO: End of Mandatory in target App-->
 
     <application
         android:allowBackup="true"
@@ -105,8 +105,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:name=".MainApplication">
-        <!--> TODO: COMPULSORY Add uses-library com.symbol.emdk to your manifest </-->
+        <!--> TODO: MANDATORY Add uses-library com.symbol.emdk to your manifest </-->
         <uses-library android:name="com.symbol.emdk" />
+        <!--> TODO: MANDATORY End of / Add uses-library com.symbol.emdk to your manifest </-->
         <activity android:name="com.zebra.criticalpermissionshelpersample.MainActivity"
             android:exported="true">
             <intent-filter>
